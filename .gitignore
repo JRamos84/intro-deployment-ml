@@ -4,3 +4,6 @@ venv/
 *.json
 *.csv
 *.plk
+*.txt
+*.png
+__pycache__/
