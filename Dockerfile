@@ -1,17 +1,17 @@
-FROM python:3.8-slim-buster
+FROM python:3.11-slim-buster
 
 WORKDIR /app
 
-COPY api/requirements.txt /app/api/
+COPY api/requirements.txt .
 
-RUN pip install -U pip && pip install -r /app/api/requirements.txt
+RUN pip install -U pip && pip install -r requirements.txt
 
-COPY api/ /app/api/
-COPY model/model.pkl /app/model/model.pkl
-COPY initializer.sh /app/
+COPY api/ ./api
+COPY model/model.pkl ./model/model.pkl
+COPY initializer.sh .
 
-RUN chmod +x /app/initializer.sh
+RUN chmod +x initializer.sh
 
 EXPOSE 8000
 
-ENTRYPOINT ["./initializer.sh"]
+ENTRYPOINT [ "./initializer.sh" ]
