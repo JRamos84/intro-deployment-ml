@@ -1,3 +1,4 @@
+from utils import update_model, save_simple_metrics_report, get_model_performance_test_set
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_validate
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.impute import SimpleImputer
