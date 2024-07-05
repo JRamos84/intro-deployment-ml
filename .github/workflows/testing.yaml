@@ -21,7 +21,7 @@ jobs:
       run: | 
         source venv/bin/activate
         pip install dvc[gs]
-        pip install -r api/requirements_test.txt
+        pip install -r requirements_test.txt
         
     - name: Test API
       run: |
